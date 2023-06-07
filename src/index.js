@@ -1,5 +1,5 @@
 import './styles/main.scss';
-import cabsal from './assets/cabsal.png';
+import footerLogo from './assets/logo-open.jpg';
 
-const cs = document.querySelector('#cabsal');
-cs.src = cabsal;
+const footerImg = document.querySelector('.footer-logo');
+footerImg.src = footerLogo;

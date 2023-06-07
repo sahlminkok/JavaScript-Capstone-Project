@@ -1,7 +1,36 @@
+*,
+*::after,
+*::before {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ text-decoration: none;
+ box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: red;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  font-size: 200px;
-  color: yellow;
+  font-size: 1.6rem;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #e7e7e7;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  height: 8rem;
+}
+
+.licence-paragraph {
+  width: 30vw;
 }
