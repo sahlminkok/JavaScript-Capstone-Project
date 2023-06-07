@@ -9,7 +9,6 @@
 }
 
 html {
-  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
@@ -46,18 +45,20 @@ body {
 
 .footer {
   padding: 1rem;
-  background-color: #e7e7e7;
-  width: 80%;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  gap: 50px;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
 }
 
 .footer-logo {
-  height: 8rem;
+  height: 40px;
 }
 
 .licence-paragraph {
-  width: 30vw;
+  font-size: 1rem;
 }
