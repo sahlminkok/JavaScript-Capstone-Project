@@ -1,10 +1,19 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
 }
 
@@ -32,4 +41,24 @@ body {
 
 #logo {
   height: 40px;
+}
+
+.footer {
+  padding: 1rem;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.licence-paragraph {
+  font-size: 1rem;
 }
