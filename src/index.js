@@ -1,5 +1,5 @@
 import './styles/main.scss';
-import cabsal from './assets/cabsal.png';
+import logo from './assets/movie-logo.png';
 
-const cs = document.querySelector('#cabsal');
-cs.src = cabsal;
+const headerLogo = document.querySelector('#logo');
+headerLogo.src = logo;

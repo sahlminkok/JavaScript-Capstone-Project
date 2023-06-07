@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-color: red;\n  font-family: Impact, Haettenschweiler, \"Arial Narrow Bold\", sans-serif;\n  text-align: center;\n  font-size: 200px;\n  color: yellow;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,qBAAA;EACA,sEAAA;EACA,kBAAA;EACA,gBAAA;EACA,aAAA;AACF","sourcesContent":["body {\r\n  background-color: red;\r\n  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;\r\n  text-align: center;\r\n  font-size: 200px;\r\n  color: yellow;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: \"Roboto\", sans-serif;\n}\n\n.header-list {\n  display: flex;\n  list-style: none;\n  gap: 50px;\n  padding: 20px;\n  align-items: center;\n  justify-content: center;\n  border: 1px solid black;\n  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);\n}\n\n.list-item {\n  font-size: 1rem;\n  text-transform: uppercase;\n  letter-spacing: 5px;\n}\n\n.list-item a {\n  text-decoration: none;\n  color: black;\n}\n\n#logo {\n  height: 40px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;AACF;;AAEA;EACE,iCAAA;AACF;;AAEA;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,uBAAA;EACA,yCAAA;AACF;;AAEA;EACE,eAAA;EACA,yBAAA;EACA,mBAAA;AACF;;AAEA;EACE,qBAAA;EACA,YAAA;AACF;;AAEA;EACE,YAAA;AACF","sourcesContent":["*{\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n\r\nbody {\r\n  font-family: \"Roboto\", sans-serif;\r\n}\r\n\r\n.header-list {\r\n  display: flex;\r\n  list-style: none;\r\n  gap: 50px;\r\n  padding: 20px;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border: 1px solid black;\r\n  box-shadow: 0 5px 20px rgba(0, 0, 0, .2);\r\n}\r\n\r\n.list-item {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n  letter-spacing: 5px;\r\n}\r\n\r\n.list-item a {\r\n  text-decoration: none;\r\n  color: black;\r\n}\r\n\r\n#logo {\r\n  height: 40px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -468,13 +468,13 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
-/***/ "./src/assets/cabsal.png":
-/*!*******************************!*\
-  !*** ./src/assets/cabsal.png ***!
-  \*******************************/
+/***/ "./src/assets/movie-logo.png":
+/*!***********************************!*\
+  !*** ./src/assets/movie-logo.png ***!
+  \***********************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "cabsal.png";
+module.exports = __webpack_require__.p + "movie-logo.png";
 
 /***/ })
 
@@ -594,14 +594,13 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
-/* harmony import */ var _assets_cabsal_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/cabsal.png */ "./src/assets/cabsal.png");
+/* harmony import */ var _assets_movie_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/movie-logo.png */ "./src/assets/movie-logo.png");
 
 
-var cs = document.querySelector('#cabsal');
-cs.src = _assets_cabsal_png__WEBPACK_IMPORTED_MODULE_1__;
-console.log(hello());
+var headerLogo = document.querySelector('#logo');
+headerLogo.src = _assets_movie_logo_png__WEBPACK_IMPORTED_MODULE_1__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=maine59e67063eb4bff004bd.js.map
+//# sourceMappingURL=main625860a8c30278b1b142.js.map
