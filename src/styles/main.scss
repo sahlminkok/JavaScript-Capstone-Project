@@ -26,6 +26,8 @@ body {
   justify-content: center;
   border: 1px solid black;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-bottom: 50px;
 }
 
 .list-item {
@@ -43,6 +45,35 @@ body {
   height: 40px;
 }
 
+.shows-list {
+  display: grid;
+  grid-template-columns: repeat(3, 205px);
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.show-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+}
+
+.show-image {
+  width: auto;
+}
+
+.show-item p {
+  font-size: 1rem;
+}
+
+.show-item button {
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 5px;
+}
+
 .footer {
   padding: 1rem;
   display: flex;
@@ -53,6 +84,7 @@ body {
   bottom: 0;
   width: 100%;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .footer-logo {
