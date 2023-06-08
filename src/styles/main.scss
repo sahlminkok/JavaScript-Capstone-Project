@@ -113,3 +113,70 @@ body {
 .licence-paragraph {
   font-size: 1rem;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c1c7d0ab;
+  overflow: scroll;
+  backdrop-filter: blur(4px);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 3% auto;
+  padding: 20px 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 700px;
+  backdrop-filter: blur(5px);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.img-popup {
+  display: block;
+  width: 20rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.movie-heading {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.dis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.dis > * {
+  font-size: 1rem;
+}
