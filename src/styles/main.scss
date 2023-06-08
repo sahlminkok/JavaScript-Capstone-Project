@@ -24,8 +24,9 @@ body {
   padding: 20px;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-bottom: 50px;
 }
 
 .list-item {
@@ -43,16 +44,66 @@ body {
   height: 40px;
 }
 
+.shows-list {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.show-item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: 10px;
+}
+
+.show-image {
+  width: auto;
+}
+
+.show-item p {
+  font-size: 1rem;
+}
+
+.show-item button {
+  border-radius: 0;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.likes-btn {
+  cursor: pointer;
+  width: 20px;
+}
+
+.likes p {
+  font-size: 0.9rem;
+}
+
 .footer {
   padding: 1rem;
   display: flex;
   gap: 50px;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  margin-top: 50px;
 }
 
 .footer-logo {

@@ -2,6 +2,59 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/displayShows.js":
+/*!*************************************!*\
+  !*** ./src/modules/displayShows.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_heart_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/heart.svg */ "./src/assets/heart.svg");
+
+var displayShows = function displayShows(shows) {
+  var showsList = document.querySelector('.shows-list');
+  showsList.innerHTML = '';
+  for (var i = 0; i < 8; i += 1) {
+    var show = shows[i];
+    var div = document.createElement('div');
+    div.className = 'show-item';
+    div.innerHTML = "\n      <img src=\"".concat(show.image.original, "\" alt=\"").concat(show.name, "\" class=\"show-image\">\n      <div class=\"info\">\n        <p>").concat(show.name, "</p>\n        <div class=\"likes\">\n          <img alt=\"likes-btn\" src=\"").concat(_assets_heart_svg__WEBPACK_IMPORTED_MODULE_0__, "\" class=\"likes-btn\">\n          <p>10 likes</p>\n        </div>\n      </div>\n      <button>Comments</button>\n      <button>Reservations</button>\n    ");
+    showsList.appendChild(div);
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayShows);
+
+/***/ }),
+
+/***/ "./src/modules/fetchShows.js":
+/*!***********************************!*\
+  !*** ./src/modules/fetchShows.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _displayShows_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./displayShows.js */ "./src/modules/displayShows.js");
+
+var fetchShows = function fetchShows(baseUrl) {
+  fetch(baseUrl).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    var result = data.map(function (element) {
+      return element.show;
+    });
+    (0,_displayShows_js__WEBPACK_IMPORTED_MODULE_0__["default"])(result);
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchShows);
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss":
 /*!***********************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/main.scss ***!
@@ -21,7 +74,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::after,\n*::before {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  text-decoration: none;\n  box-sizing: border-box;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nbody {\n  font-size: 1.6rem;\n  font-family: \"Roboto\", sans-serif;\n}\n\n.header-list {\n  display: flex;\n  list-style: none;\n  gap: 50px;\n  padding: 20px;\n  align-items: center;\n  justify-content: center;\n  border: 1px solid black;\n  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);\n}\n\n.list-item {\n  font-size: 1rem;\n  text-transform: uppercase;\n  letter-spacing: 5px;\n}\n\n.list-item a {\n  text-decoration: none;\n  color: black;\n}\n\n#logo {\n  height: 40px;\n}\n\n.footer {\n  padding: 1rem;\n  display: flex;\n  gap: 50px;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);\n}\n\n.footer-logo {\n  height: 40px;\n}\n\n.licence-paragraph {\n  font-size: 1rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAA;EACA,UAAA;EACA,gBAAA;EACA,qBAAA;EACA,sBAAA;AACF;;AAEA;EACE,uBAAA;AACF;;AAEA;EACE,iBAAA;EACA,iCAAA;AACF;;AAEA;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,uBAAA;EACA,yCAAA;AACF;;AAEA;EACE,eAAA;EACA,yBAAA;EACA,mBAAA;AACF;;AAEA;EACE,qBAAA;EACA,YAAA;AACF;;AAEA;EACE,YAAA;AACF;;AAEA;EACE,aAAA;EACA,aAAA;EACA,SAAA;EACA,mBAAA;EACA,uBAAA;EACA,eAAA;EACA,SAAA;EACA,WAAA;EACA,0CAAA;AACF;;AAEA;EACE,YAAA;AACF;;AAEA;EACE,eAAA;AACF","sourcesContent":["*,\r\n*::after,\r\n*::before {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  font-size: 1.6rem;\r\n  font-family: \"Roboto\", sans-serif;\r\n}\r\n\r\n.header-list {\r\n  display: flex;\r\n  list-style: none;\r\n  gap: 50px;\r\n  padding: 20px;\r\n  align-items: center;\r\n  justify-content: center;\r\n  border: 1px solid black;\r\n  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.list-item {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n  letter-spacing: 5px;\r\n}\r\n\r\n.list-item a {\r\n  text-decoration: none;\r\n  color: black;\r\n}\r\n\r\n#logo {\r\n  height: 40px;\r\n}\r\n\r\n.footer {\r\n  padding: 1rem;\r\n  display: flex;\r\n  gap: 50px;\r\n  align-items: center;\r\n  justify-content: center;\r\n  position: fixed;\r\n  bottom: 0;\r\n  width: 100%;\r\n  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);\r\n}\r\n\r\n.footer-logo {\r\n  height: 40px;\r\n}\r\n\r\n.licence-paragraph {\r\n  font-size: 1rem;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "*,\n*::after,\n*::before {\n  margin: 0;\n  padding: 0;\n  list-style: none;\n  text-decoration: none;\n  box-sizing: border-box;\n}\n\nhtml {\n  scroll-behavior: smooth;\n}\n\nbody {\n  font-size: 1.6rem;\n  font-family: \"Roboto\", sans-serif;\n}\n\n.header-list {\n  display: flex;\n  list-style: none;\n  gap: 50px;\n  padding: 20px;\n  align-items: center;\n  justify-content: center;\n  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);\n  background-color: #fff;\n  margin-bottom: 50px;\n}\n\n.list-item {\n  font-size: 1rem;\n  text-transform: uppercase;\n  letter-spacing: 5px;\n}\n\n.list-item a {\n  text-decoration: none;\n  color: black;\n}\n\n#logo {\n  height: 40px;\n}\n\n.shows-list {\n  display: grid;\n  grid-template-columns: repeat(4, 200px);\n  justify-content: center;\n  gap: 50px;\n  align-items: center;\n}\n\n.show-item {\n  display: flex;\n  flex-direction: column;\n  width: 200px;\n  gap: 10px;\n}\n\n.show-image {\n  width: auto;\n}\n\n.show-item p {\n  font-size: 1rem;\n}\n\n.show-item button {\n  border-radius: 0;\n  border: 1px solid black;\n  padding: 5px;\n}\n\n.info {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n\n.likes {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 80px;\n}\n\n.likes-btn {\n  cursor: pointer;\n  width: 20px;\n}\n\n.likes p {\n  font-size: 0.9rem;\n}\n\n.footer {\n  padding: 1rem;\n  display: flex;\n  gap: 50px;\n  align-items: center;\n  justify-content: center;\n  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);\n  background-color: #fff;\n  margin-top: 50px;\n}\n\n.footer-logo {\n  height: 40px;\n}\n\n.licence-paragraph {\n  font-size: 1rem;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;;;EAGE,SAAA;EACA,UAAA;EACA,gBAAA;EACA,qBAAA;EACA,sBAAA;AACF;;AAEA;EACE,uBAAA;AACF;;AAEA;EACE,iBAAA;EACA,iCAAA;AACF;;AAEA;EACE,aAAA;EACA,gBAAA;EACA,SAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;EACA,yCAAA;EACA,sBAAA;EACA,mBAAA;AACF;;AAEA;EACE,eAAA;EACA,yBAAA;EACA,mBAAA;AACF;;AAEA;EACE,qBAAA;EACA,YAAA;AACF;;AAEA;EACE,YAAA;AACF;;AAEA;EACE,aAAA;EACA,uCAAA;EACA,uBAAA;EACA,SAAA;EACA,mBAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,YAAA;EACA,SAAA;AACF;;AAEA;EACE,WAAA;AACF;;AAEA;EACE,eAAA;AACF;;AAEA;EACE,gBAAA;EACA,uBAAA;EACA,YAAA;AACF;;AAEA;EACE,aAAA;EACA,8BAAA;EACA,mBAAA;AACF;;AAEA;EACE,aAAA;EACA,sBAAA;EACA,mBAAA;EACA,WAAA;AACF;;AAEA;EACE,eAAA;EACA,WAAA;AACF;;AAEA;EACE,iBAAA;AACF;;AAEA;EACE,aAAA;EACA,aAAA;EACA,SAAA;EACA,mBAAA;EACA,uBAAA;EACA,0CAAA;EACA,sBAAA;EACA,gBAAA;AACF;;AAEA;EACE,YAAA;AACF;;AAEA;EACE,eAAA;AACF","sourcesContent":["*,\r\n*::after,\r\n*::before {\r\n  margin: 0;\r\n  padding: 0;\r\n  list-style: none;\r\n  text-decoration: none;\r\n  box-sizing: border-box;\r\n}\r\n\r\nhtml {\r\n  scroll-behavior: smooth;\r\n}\r\n\r\nbody {\r\n  font-size: 1.6rem;\r\n  font-family: \"Roboto\", sans-serif;\r\n}\r\n\r\n.header-list {\r\n  display: flex;\r\n  list-style: none;\r\n  gap: 50px;\r\n  padding: 20px;\r\n  align-items: center;\r\n  justify-content: center;\r\n  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);\r\n  background-color: #fff;\r\n  margin-bottom: 50px;\r\n}\r\n\r\n.list-item {\r\n  font-size: 1rem;\r\n  text-transform: uppercase;\r\n  letter-spacing: 5px;\r\n}\r\n\r\n.list-item a {\r\n  text-decoration: none;\r\n  color: black;\r\n}\r\n\r\n#logo {\r\n  height: 40px;\r\n}\r\n\r\n.shows-list {\r\n  display: grid;\r\n  grid-template-columns: repeat(4, 200px);\r\n  justify-content: center;\r\n  gap: 50px;\r\n  align-items: center;\r\n}\r\n\r\n.show-item {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 200px;\r\n  gap: 10px;\r\n}\r\n\r\n.show-image {\r\n  width: auto;\r\n}\r\n\r\n.show-item p {\r\n  font-size: 1rem;\r\n}\r\n\r\n.show-item button {\r\n  border-radius: 0;\r\n  border: 1px solid black;\r\n  padding: 5px;\r\n}\r\n\r\n.info {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n}\r\n\r\n.likes {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  width: 80px;\r\n}\r\n\r\n.likes-btn {\r\n  cursor: pointer;\r\n  width: 20px;\r\n}\r\n\r\n.likes p {\r\n  font-size: 0.9rem;\r\n}\r\n\r\n.footer {\r\n  padding: 1rem;\r\n  display: flex;\r\n  gap: 50px;\r\n  align-items: center;\r\n  justify-content: center;\r\n  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);\r\n  background-color: #fff;\r\n  margin-top: 50px;\r\n}\r\n\r\n.footer-logo {\r\n  height: 40px;\r\n}\r\n\r\n.licence-paragraph {\r\n  font-size: 1rem;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -468,6 +521,16 @@ module.exports = styleTagTransform;
 
 /***/ }),
 
+/***/ "./src/assets/heart.svg":
+/*!******************************!*\
+  !*** ./src/assets/heart.svg ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "heart.svg";
+
+/***/ }),
+
 /***/ "./src/assets/movie-logo.png":
 /*!***********************************!*\
   !*** ./src/assets/movie-logo.png ***!
@@ -595,14 +658,18 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
 /* harmony import */ var _assets_movie_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/movie-logo.png */ "./src/assets/movie-logo.png");
+/* harmony import */ var _modules_fetchShows_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/fetchShows.js */ "./src/modules/fetchShows.js");
+
 
 
 var headerLogo = document.querySelector('#logo');
 var footerImg = document.querySelector('.footer-logo');
+var baseUrl = 'https://api.tvmaze.com/search/shows?q=marvel';
 headerLogo.src = _assets_movie_logo_png__WEBPACK_IMPORTED_MODULE_1__;
 footerImg.src = _assets_movie_logo_png__WEBPACK_IMPORTED_MODULE_1__;
+(0,_modules_fetchShows_js__WEBPACK_IMPORTED_MODULE_2__["default"])(baseUrl);
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=main00da2487afa72e0a651f.js.map
+//# sourceMappingURL=main1779f3616f4bae8f0e8d.js.map
