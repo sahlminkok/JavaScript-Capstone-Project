@@ -1,8 +1,10 @@
 import likeImg from '../assets/heart.svg';
+import createPopup from './popup.js';
 
 const displayShows = (shows) => {
   const showsList = document.querySelector('.shows-list');
   showsList.innerHTML = '';
+
   for (let i = 0; i < 8; i += 1) {
     const show = shows[i];
     const div = document.createElement('div');
@@ -16,11 +18,17 @@ const displayShows = (shows) => {
           <p>10 likes</p>
         </div>
       </div>
-      <button>Comments</button>
+      <button class="btn-comment">Comments</button>
       <button>Reservations</button>
     `;
 
     showsList.appendChild(div);
+
+    // Attach click event listener to comment button
+    const commentButton = div.querySelector('.btn-comment');
+    commentButton.addEventListener('click', () => {
+      createPopup(show);
+    });
   }
 };
 
