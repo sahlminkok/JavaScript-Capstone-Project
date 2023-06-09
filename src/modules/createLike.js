@@ -5,7 +5,7 @@ const createLike = async (id) => {
 
   const obj = {
     item_id: id,
-  }
+  };
 
   await fetch(Url, {
     method: 'POST',
@@ -14,7 +14,9 @@ const createLike = async (id) => {
     },
     body: JSON.stringify(obj),
   });
-  await displayLike(id);
-}
+
+  const likeCount = await displayLike(id);
+  return likeCount;
+};
 
 export default createLike;

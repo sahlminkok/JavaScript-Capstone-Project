@@ -1,13 +1,13 @@
 import likeImg from '../assets/heart.svg';
 import createPopup from './popup.js';
 import createLike from './createLike.js';
+import displayLike from './displayLike.js';
 
 const displayShows = (shows) => {
   const showsList = document.querySelector('.shows-list');
   showsList.innerHTML = '';
 
-  for (let i = 0; i < 8; i += 1) {
-    const show = shows[i];
+  shows.slice(0, 8).forEach(async (show) => {
     const div = document.createElement('div');
     div.className = 'show-item';
     div.innerHTML = `
@@ -26,10 +26,17 @@ const displayShows = (shows) => {
     showsList.appendChild(div);
 
     const likeBtn = div.querySelector('.likes-btn');
+    const likeCount = div.querySelector('.like-count');
+
+    displayLike(show.id).then((initialLikeCount) => {
+      likeCount.textContent = initialLikeCount;
+    });
 
     likeBtn.addEventListener('click', (event) => {
       const { showId } = event.target.dataset;
-      createLike(showId);
+      createLike(showId).then((newLikeCount) => {
+        likeCount.textContent = newLikeCount;
+      });
     });
 
     // Attach click event listener to comment button
@@ -38,7 +45,7 @@ const displayShows = (shows) => {
       const { showId } = event.target.dataset;
       createPopup(show, showId);
     });
-  }
+  });
 };
 
 export default displayShows;
