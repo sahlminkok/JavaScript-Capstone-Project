@@ -18,7 +18,7 @@ const displayShows = (shows) => {
           <p>10 likes</p>
         </div>
       </div>
-      <button class="btn-comment">Comments</button>
+      <button class="btn-comment" data-show-id="${show.id}"">Comments</button>
       <button>Reservations</button>
     `;
 
@@ -26,8 +26,9 @@ const displayShows = (shows) => {
 
     // Attach click event listener to comment button
     const commentButton = div.querySelector('.btn-comment');
-    commentButton.addEventListener('click', () => {
-      createPopup(show);
+    commentButton.addEventListener('click', (event) => {
+      const { showId } = event.target.dataset;
+      createPopup(show, showId);
     });
   }
 };
