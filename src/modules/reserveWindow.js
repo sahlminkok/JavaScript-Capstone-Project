@@ -3,10 +3,14 @@ import reserveCounter from './reserveCounter.js';
 const bodyTag = document.querySelector('body');
 
 const getReservation = async (id) => {
-  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/comments?item_id=item${id}`;
-  const response = await fetch(url);
-  const data = await response.json();
-  return data;
+  try {
+    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/reservations?item_id=item${id}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 const renderReservations = async (id) => {
@@ -88,12 +92,12 @@ const showModal = async (id) => {
     const startDate = document.getElementById('start-date');
     const endDate = document.getElementById('end-date');
 
-    const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/comments';
+    const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/UKP27MmenkdUVvm9H93H/reservations';
     const data = {
       item_id: `item${id}`,
       username: username.value,
-      startDate: startDate.value,
-      endDate: endDate.value,
+      date_start: startDate.value,
+      date_end: endDate.value,
     };
     await fetch(url, {
       method: 'POST',

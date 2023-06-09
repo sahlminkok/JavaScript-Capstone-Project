@@ -31,9 +31,10 @@ const displayShows = (shows) => {
       createPopup(show);
     });
 
-    const reserveButtons = document.querySelector('.btn-reserve');
-    reserveButtons.addEventListener('click', (e) => {
-      showModal(e.target.id);
+    // Attach click event listener to reservation button
+    const reserveButtons = div.querySelector('.btn-reserve');
+    reserveButtons.addEventListener('click', () => {
+      showModal(show);
     });
   }
 };
