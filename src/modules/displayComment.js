@@ -1,4 +1,3 @@
-
 const showComments = async (showId) => {
   const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 
@@ -16,7 +15,7 @@ const showComments = async (showId) => {
         <span>Date: ${comment.creation_date}</span> - Name: <span>${comment.username}</span> -  <span>${comment.comment}</span>
         `;
       allCommentContainer.appendChild(p);
-    })
+    });
   } catch (error) {
     console.error('Error fetching comments:', error);
     // Handle error here

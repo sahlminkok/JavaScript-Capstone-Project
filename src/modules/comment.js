@@ -6,7 +6,7 @@ const createComment = async (showId, username, comment) => {
   const requestBody = {
     item_id: showId,
     username,
-    comment
+    comment,
   };
 
   try {
@@ -14,14 +14,14 @@ const createComment = async (showId, username, comment) => {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
     });
 
     await showComments(showId);
   } catch (error) {
-    console.error('Error creating comment:', error);
-    // Handle error here
+    const massage = document.createElement('h1');
+    massage.innerHTML = `Error happend ${error}`;
   }
 };
 
