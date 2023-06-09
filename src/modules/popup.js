@@ -1,5 +1,6 @@
 import createComment from './comment.js';
 import showComments from './displayComment.js';
+import showCounter from './showCounter.js';
 
 const createPopup = (show, showId) => {
   // Create a modal element
@@ -18,12 +19,13 @@ const createPopup = (show, showId) => {
     <p>Type: ${show.type}</p>
     <p>Genres : ${show.genres}</p>
     </div>
+    <div class="counter"></div>
     <div class="comment-container">
     <div class="show-comment"></div>
     </div>
     <div class="add-comment">
-      <input type="text" class="name-input">
-      <input type="text" class="message-input">
+      <input type="text" class="name-input" placeholder="Enter Your Name">
+      <input type="text" class="message-input" placeholder="Enter Your Massage">
       <button class="btn-submit">Submit</button>
     </div>
   `;
@@ -39,6 +41,8 @@ const createPopup = (show, showId) => {
   closeButton.addEventListener('click', () => {
     document.body.removeChild(modal);
   });
+  showCounter(showId);
+  showComments(showId);
 
   const submitButton = modalContent.querySelector('.btn-submit');
   submitButton.addEventListener('click', () => {
@@ -48,6 +52,7 @@ const createPopup = (show, showId) => {
     const message = messageInput.value;
 
     createComment(showId, name, message);
+    showCounter(showId);
     nameInput.value = '';
     messageInput.value = '';
   });

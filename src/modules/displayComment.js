@@ -13,7 +13,7 @@ const showComments = async (showId) => {
       const p = document.createElement('p');
       p.classList.add('comment-paragraph');
       p.innerHTML = `
-        <span>${comment.creation_date}</span>, <span>${comment.username}</span>, <span>${comment.comment}</span>
+        <span>Date: ${comment.creation_date}</span> - Name: <span>${comment.username}</span> -  <span>${comment.comment}</span>
         `;
       allCommentContainer.appendChild(p);
     })

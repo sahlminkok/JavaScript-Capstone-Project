@@ -180,3 +180,35 @@ body {
 .dis > * {
   font-size: 1rem;
 }
+
+.counter-heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.show-comment > * {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+
+.comment-container {
+  margin-bottom: 2rem;
+}
+
+.add-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.name-input,
+.message-input {
+  padding: .5rem 1rem;
+}
+
+.btn-submit {
+  padding: .7rem 1.4rem;
+}
