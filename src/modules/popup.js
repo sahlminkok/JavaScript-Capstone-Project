@@ -1,6 +1,6 @@
 import createComment from './comment.js';
 import showComments from './displayComment.js';
-import showCounter from './showCounter.js';
+import showCounter from './commentCounter.js';
 
 const createPopup = (show, showId) => {
   // Create a modal element

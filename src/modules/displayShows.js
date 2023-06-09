@@ -2,6 +2,7 @@ import likeImg from '../assets/heart.svg';
 import createPopup from './popup.js';
 import createLike from './createLike.js';
 import displayLike from './displayLike.js';
+import countDisplayedShows from './showCounter.js';
 
 const displayShows = (shows) => {
   const showsList = document.querySelector('.shows-list');
@@ -46,6 +47,12 @@ const displayShows = (shows) => {
       createPopup(show, showId);
     });
   });
+
+  // Call the counter function and update the DOM
+  const displayedShowsCount = countDisplayedShows();
+
+  const showsCounterElement = document.querySelector('.shows-counter');
+  showsCounterElement.textContent = displayedShowsCount;
 };
 
 export default displayShows;
