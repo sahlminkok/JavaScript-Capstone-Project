@@ -1,5 +1,6 @@
 import likeImg from '../assets/heart.svg';
 import createPopup from './popup.js';
+import showModal from './reserveWindow.js';
 
 const displayShows = (shows) => {
   const showsList = document.querySelector('.shows-list');
@@ -19,7 +20,7 @@ const displayShows = (shows) => {
         </div>
       </div>
       <button class="btn-comment">Comments</button>
-      <button>Reservations</button>
+      <button class="btn-reserve">Reservations</button>
     `;
 
     showsList.appendChild(div);
@@ -28,6 +29,11 @@ const displayShows = (shows) => {
     const commentButton = div.querySelector('.btn-comment');
     commentButton.addEventListener('click', () => {
       createPopup(show);
+    });
+
+    const reserveButtons = document.querySelector('.btn-reserve');
+    reserveButtons.addEventListener('click', (e) => {
+      showModal(e.target.id);
     });
   }
 };
