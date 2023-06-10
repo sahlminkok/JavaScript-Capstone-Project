@@ -1,4 +1,5 @@
 import showComments from './displayComment.js';
+import commentCounter from './commentCounter.js';
 
 const createComment = async (showId, username, comment) => {
   const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/CPii9JproaMtnGMvqcdi/comments';
@@ -19,6 +20,7 @@ const createComment = async (showId, username, comment) => {
     });
 
     await showComments(showId);
+    await commentCounter(showId);
   } catch (error) {
     const massage = document.createElement('h1');
     massage.innerHTML = `Error happend ${error}`;
