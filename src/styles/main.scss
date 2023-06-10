@@ -259,7 +259,7 @@ body {
 ::placeholder {
   font-style: italic;
   font-size: 1.5rem;
-  font-weight: light;
+  font-weight: 100;
 }
 
 .reserve-button {
@@ -276,7 +276,7 @@ body {
   left: 0;
   z-index: 100;
   font-family: 'Estonia', cursive;
-  font-weight: light;
+  font-weight: 100;
   font-size: 1rem;
   display: none;
 }
@@ -328,12 +328,6 @@ body {
 }
 
 #close-reserve-popup {
-  border: none;
-  width: 20px;
-  padding-left: 5rem;
-}
-
-#close-reserve-popup {
   color: #908989;
   float: right;
   font-size: 2rem;
@@ -348,7 +342,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 #listOfReservations {
   padding: 10px 5rem;
