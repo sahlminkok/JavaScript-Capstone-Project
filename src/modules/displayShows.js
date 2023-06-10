@@ -1,6 +1,6 @@
 import likeImg from '../assets/heart.svg';
 import createPopup from './popup.js';
-import showModal from './reserveWindow.js';
+import createPop from './reserveWindow.js';
 
 const displayShows = (shows) => {
   const showsList = document.querySelector('.shows-list');
@@ -19,22 +19,24 @@ const displayShows = (shows) => {
           <p>10 likes</p>
         </div>
       </div>
-      <button class="btn-comment">Comments</button>
-      <button class="btn-reserve">Reservations</button>
+      <button class="btn-comment" data-show-id="${show.id}"">Comments</button>
+      <button class="btn-reserve" id="btn-reserve-${show.id}">Reservations</button>
     `;
 
     showsList.appendChild(div);
 
     // Attach click event listener to comment button
     const commentButton = div.querySelector('.btn-comment');
-    commentButton.addEventListener('click', () => {
-      createPopup(show);
+    commentButton.addEventListener('click', (event) => {
+      const { showId } = event.target.dataset;
+      createPopup(show, showId);
     });
 
     // Attach click event listener to reservation button
     const reserveButtons = div.querySelector('.btn-reserve');
-    reserveButtons.addEventListener('click', () => {
-      showModal(show);
+    reserveButtons.addEventListener('click', (event) => {
+      const { showId } = event.target.dataset;
+      createPop(show, showId);
     });
   }
 };

@@ -1,4 +1,8 @@
-const popup = (movie) => {
+import createComment from './comment.js';
+import showComments from './displayComment.js';
+import showCounter from './showCounter.js';
+
+const createPopup = (show, showId) => {
   // Create a modal element
   const modal = document.createElement('div');
   modal.classList.add('modal');
@@ -9,11 +13,20 @@ const popup = (movie) => {
   modalContent.classList.add('modal-content');
   modalContent.innerHTML = `
     <span class="close">&times;</span>
-    <img src="${movie.image.original}" class="img-popup">
-    <h2 class="movie-heading">${movie.name}</h2>
+    <img src="${show.image.original}" class="img-popup">
+    <h2 class="movie-heading">${show.name}</h2>
     <div class="dis">
-    <p>Type: ${movie.type}</p>
-    <p>Genres : ${movie.genres}</p>
+    <p>Type: ${show.type}</p>
+    <p>Genres : ${show.genres}</p>
+    </div>
+    <div class="counter"></div>
+    <div class="comment-container">
+    <div class="show-comment"></div>
+    </div>
+    <div class="add-comment">
+      <input type="text" class="name-input" placeholder="Enter Your Name">
+      <input type="text" class="message-input" placeholder="Enter Your Massage">
+      <button class="btn-submit">Submit</button>
     </div>
   `;
 
@@ -28,6 +41,21 @@ const popup = (movie) => {
   closeButton.addEventListener('click', () => {
     document.body.removeChild(modal);
   });
+  showCounter(showId);
+  showComments(showId);
+
+  const submitButton = modalContent.querySelector('.btn-submit');
+  submitButton.addEventListener('click', () => {
+    const nameInput = modalContent.querySelector('.name-input');
+    const messageInput = modalContent.querySelector('.message-input');
+    const name = nameInput.value;
+    const message = messageInput.value;
+
+    createComment(showId, name, message);
+    showCounter(showId);
+    nameInput.value = '';
+    messageInput.value = '';
+  });
 };
 
-export default popup;
+export default createPopup;
