@@ -1,3 +1,10 @@
+:root {
+  --white: #f1f6f9;
+  --light-blue: #394867;
+  --dark-blue: #212a3e;
+  --gray: #9ba4b5;
+}
+
 *,
 *::after,
 *::before {
@@ -15,6 +22,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+  color: var(--light-blue);
 }
 
 .header-list {
@@ -181,6 +190,16 @@ body {
   font-size: 1rem;
 }
 
+.work-close {
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.work-close:hover {
+  transform: scale(2);
+  transition: 0.3s;
+}
+
 .counter-heading {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -211,4 +230,128 @@ body {
 
 .btn-submit {
   padding: 0.7rem 1.4rem;
+}
+
+// All reservation style
+
+.btn-reserve {
+  border: none;
+  border-radius: 5px;
+}
+
+#new-reserve {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-input,
+.reserve-button {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  border: 1px solid #777;
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  width: 70%;
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.reserve-button {
+  box-shadow: 5px 5px 0 black;
+  margin-bottom: 3rem;
+}
+
+.reservation {
+  background-color: rgba(61, 59, 59, 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  font-family: 'Estonia', cursive;
+  font-weight: 100;
+  font-size: 1rem;
+  display: none;
+}
+
+.reservepopup {
+  background-color: hsl(0, 0%, 100%);
+  height: 100vh;
+  width: 100vw;
+  max-width: 800px;
+  margin: 1vh auto;
+  border: 1px lightgray solid;
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.reserveImage {
+  width: 100%;
+  height: 25rem;
+  border-radius: 10px;
+  margin-left: 2rem;
+}
+
+.reservation-img-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.close-reservation {
+  width: 5%;
+  margin: 0 2rem;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+.grid-item {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#close-reserve-popup {
+  color: #908989;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: -26rem;
+  margin-right: 2rem;
+}
+
+#close-reserve-popup:hover,
+#close-reserve-popup:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#listOfReservations {
+  padding: 10px 5rem;
+}
+
+.reservation-records {
+  padding: 0.5rem;
+}
+
+.add-reserve,
+.reserve-count {
+  padding-left: 20rem;
 }
