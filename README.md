@@ -118,8 +118,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://google.com)
-- [Intro Video](https://me.com)
+- [Live Demo Link](https://sahlminkok.github.io/JavaScript-Capstone-Project/)
+- [Intro Video](https://drive.google.com/file/d/1N4c0uPlphjTUaXTWmoVBDPs-FrxhSajC/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
