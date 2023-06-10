@@ -1,4 +1,4 @@
-const showCounter = async (showId) => {
+const commentCounter = async (showId) => {
   const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
 
   const commentsUrl = `${baseURL}/apps/CPii9JproaMtnGMvqcdi/comments?item_id=${showId}`;
@@ -14,4 +14,4 @@ const showCounter = async (showId) => {
   }
 };
 
-export default showCounter;
+export default commentCounter;
