@@ -4,10 +4,79 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <title><%=htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <img id="cabsal" alt="" />
-    <p>Let's Add</p>
+
+    <header>
+      <nav>
+        <ul class="header-list">
+          <li class="list-item">
+            <a href="#"><img src="" id="logo" alt="logo"></a>
+          </li>
+          <li class="list-item">
+            <a href="#">Shows(<span class="shows-counter"></span>)</a>
+          </li>
+          <li class="list-item">
+            <a href="#">Episodes</a>
+          </li>
+          <li class="list-item">
+            <a href="#">More</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="shows-list">
+        
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img  alt="website log" class="footer-logo">
+      <p class="licence-paragraph">© [2023] Microverse. All rights reserved. Unauthorized use prohibited.</p>
+    </footer>
+
+    <div class="reservation" id="reservation-container">
+      <div class="reservepopup">
+        <div class="reservation-img-container">
+          <div id="reservation-img">
+          </div>
+        </div>
+        <!-- <span class="close-reservation"><span id="close-reserve-popup"><i class="fa fa-window-close closeButton fs-3" aria-hidden="true">X</i></span></span> -->
+        <span id="close-reserve-popup">&times;</span>
+        <div class="features grid-container">
+          <div class="grid-item">
+            <p class="movie-features">Name: <span id="rating-group"></span></p>
+          </div>
+          <div class="grid-item">
+            <p class="movie-features">Type: <span id="length"></span></p>
+          </div>
+          <div class="grid-item">
+            <p class="movie-features">Language: <span id="language"></span></p>
+          </div>
+          <div class="grid-item">
+            <p class="movie-features">Genre: <span id="status"></span></p>
+          </div>
+        </div>
+        <div class="reservation-list">
+          <h3 class="reserve-count">Reservation: <span id="reservation-counter"></span></h3>
+          <ul id="listOfReservations"></ul>
+        </div>
+        <div>
+          <h3 class="add-reserve">Add a reservation</h3>
+          <form id="new-reserve">
+            <input type="text" id="username" class="reserve-input"  placeholder="Your name">
+            <input type="date" id="start-date" class="reserve-input">
+            <label for="start-date">Start Date</label>
+            <input type="date" class="reserve-input" id="end-date">
+            <label for="end-date">End Date</label>
+            <button id="new-reserve-submit" class="reserve-button" type="submit">Reserve</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
