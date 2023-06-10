@@ -190,13 +190,12 @@ You can deploy this project using:
 - Twitter: [@sahlminkok](https://twitter.com/sahlminkok)
 - LinkedIn: [sahlminkok](https://linkedin.com/in/sahlminkok)
 
-👤 **Author2**
+👤 **Toyyib Bello**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@simpleshaikh1](https://github.com/simpleshaikh1)
+- LinkedIn: [Toyyib Abayomi](https://linkedin.com/in/linkedinhandle)
 
-👤 **Author2**
+👤 **Jubaer Hossain Maruf**
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
@@ -208,11 +207,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **Make a Mobile Version Of the Web App**
+- [ ] **Add Background colors and Design**
+- [ ] **Add the Remaining Sections of the Web App**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
