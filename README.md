@@ -197,9 +197,9 @@ You can deploy this project using:
 
 👤 **Jubaer Hossain Maruf**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@jubaer919](https://github.com/jubaer919)
+- Twitter: [@jubaer_maruf](https://twitter.com/jubaer_maruf)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jubaer-hossain-maruf-8a4a68214/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
