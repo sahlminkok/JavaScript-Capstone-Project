@@ -50,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Hello, World',
+      title: 'Amazing Movies',
       filename: 'index.html',
       template: 'src/index.html',
     }),

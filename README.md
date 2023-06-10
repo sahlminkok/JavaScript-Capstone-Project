@@ -27,10 +27,10 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="dist\cabsal.png" alt="logo" width="140"  height="auto" />
+  <img src="src/assets/movie-logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Microverse README Template</b></h3>
+  <h3><b>Amazing Movies</b></h3>
 
 </div>
 
@@ -38,8 +38,8 @@ After you're finished please remove all the comments and instructions!
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
-- [📖 \[your\_project\_name\] ](#-your_project_name-)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Amazing Movies ](#-amazing-movies-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -61,36 +61,47 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Amazing Movies <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+**Amazing Movies** is a web application based on a TVmaze API to displays data about TV series and movies. A user can comment, like, and also view information about the movie. comments and liks are based on involvement-API.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+<details>
+  <summary>Text Editor</summary>
+  <ul>
+    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+  </ul>
+</details>
 
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+<summary>Style</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
   </ul>
 </details>
 
 <details>
-<summary>Database</summary>
+<summary>Bundle</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://webpack.js.org/">Webpack</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Test</summary>
+  <ul>
+    <li><a href="https://jestjs.io/">Jest</a></li>
   </ul>
 </details>
 
@@ -98,11 +109,9 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Fetch and send data to an API**
+- **Save and retrieve Likes, Comments, and Reservations**
+- **Testing Using Jest**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -110,9 +119,8 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://google.com)
+- [Intro Video](https://me.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -120,83 +128,56 @@ After you're finished please remove all the comments and instructions!
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
 
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+- Browser
+- Code Editor
+- Node.js
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/sahlminkok/JavaScript-Capstone-Project.git
 ```
---->
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
   cd my-project
-  gem install
+  npm install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm run dev
 ```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
 ```sh
-  bin/rails test test/models/article_test.rb
+  npm test
 ```
---->
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
-
-```sh
-
-```
- -->
+- Free deployment services like GitHub pages.
+- Any deployment services of your choice.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,9 +185,13 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Sahalu Aminu**
 
-👤 **Author1**
+- GitHub: [@sahlminkok](https://github.com/sahlminkok)
+- Twitter: [@sahlminkok](https://twitter.com/sahlminkok)
+- LinkedIn: [sahlminkok](https://linkedin.com/in/sahlminkok)
+
+👤 **Author2**
 
 - GitHub: [@githubhandle](https://github.com/githubhandle)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
